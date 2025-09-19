@@ -7,9 +7,9 @@ const createRoom = (capacity: number) => {
   var _zombies = 0;
 
   return {
-    isFull: () => _zombies < _capacity? false : true,
+    isFull: () => _zombies >= _capacity,
     getCapacity: () => _capacity,
-    addZombie: () => { if(_capacity > 0) { _zombies += 1} },
+    addZombie: () => { if(_capacity > _zombies) { _zombies += 1} },
     getZombies: () => _zombies,
   };
 };

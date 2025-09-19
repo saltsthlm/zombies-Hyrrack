@@ -66,6 +66,15 @@ test("two-roomer is not full when a zombie is added", () => {
   ok(!isRoomFull);
 });
 
-test.skip("second zombie consumes first zombie when added to a one-roomer", () => {});
+test("second zombie consumes first zombie when added to a one-roomer", () => {
+  const room = createRoom(1);
+
+  room.addZombie();
+  room.addZombie();
+
+  equal(room.getCapacity(), 1);
+  equal(room.getZombies(), 1);
+
+});
 
 // You are free to add more tests that you think are relevant!

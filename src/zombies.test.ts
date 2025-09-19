@@ -6,7 +6,7 @@ const createRoom = (capacity: number) => {
   const _capacity = capacity;
 
   return {
-    isFull: () => true,
+    isFull: () => _capacity == 0 ? true : false,
     getCapacity: () => _capacity,
   };
 };

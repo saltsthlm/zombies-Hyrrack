@@ -23,6 +23,7 @@ public class ZombiesTests
         var isRoomFull = room.IsFull();
 
         Assert.False(isRoomFull);
+        Assert.Equal(1, room.Capacity);
 
     }
 
@@ -52,13 +53,21 @@ public class ZombiesTests
         var number_of_zombies = room.GetZombies();
         var isRoomFull = room.IsFull();
 
-        Assert.Equal(number_of_zombies, 1);
+        Assert.Equal(1, number_of_zombies);
         Assert.True(isRoomFull);
     }
 
     [Fact]
     public void TwoRoomerIsNotFull_WhenAZombieIsAdded()
     {
+        var room = new Room(2);
+        room.AddZombie("Z1");
+
+        var number_of_zombies = room.GetZombies();
+        var isRoomFull = room.IsFull();
+
+        Assert.Equal(1, number_of_zombies);
+        Assert.False(isRoomFull);
     }
 
     [Fact]

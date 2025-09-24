@@ -29,6 +29,18 @@ public class ZombiesTests
     [Fact]
     public void RoomWithNoCapacity_CannotFitAnyZombies()
     {
+        try
+        {
+            var room = new Room(0);
+
+            room.AddZombie(1);
+        }
+        catch (System.Exception ex)
+        {
+            Assert.Equal("Cannot add zombies to room with zero capacity", ex.Message);
+            return;
+        }
+        Assert.True(false, "No exception when adding zombie to empty room");
     }
 
     [Fact]

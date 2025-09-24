@@ -73,6 +73,15 @@ public class ZombiesTests
     [Fact]
     public void SecondZombieConsumesFirstZombie_WhenAddedToAOneRoomer()
     {
+        var room = new Room(1);
+        room.AddZombie("Z1");
+        room.AddZombie("Z2");
+
+        var number_of_zombies = room.GetZombies();
+        var first_zombie = room.GetFirstZombie();
+
+        Assert.Equal(1, number_of_zombies);
+        Assert.Equal("Z2", first_zombie);
     }
 }
 

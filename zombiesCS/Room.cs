@@ -18,7 +18,7 @@
             return false;
         }
 
-        public AddZombie(int number_of_zombies)
+        public void AddZombie(int number_of_zombies)
         {
             if (this.Capacity < 1)
             {

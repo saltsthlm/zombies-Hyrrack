@@ -15,6 +15,10 @@
             {
                 return true;
             }
+            if (_zombies.Count >= this.Capacity)
+            {
+                return true;
+            }
             return false;
         }
 
@@ -30,7 +34,7 @@
 
         public int GetZombies()
         {
-            return _zombies.Count();
+            return _zombies.Count;
         }
     }
 }

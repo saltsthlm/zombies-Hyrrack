@@ -27,5 +27,10 @@
 
             _zombies.Enqueue(zombie);
         }
+
+        public int GetZombies()
+        {
+            return _zombies.Count();
+        }
     }
 }

@@ -28,8 +28,12 @@
             {
                 throw new Exception("Cannot add zombies to room with zero capacity");
             }
-
             _zombies.Enqueue(zombie);
+
+            if (_zombies.Count > this.Capacity)
+            {
+                _zombies.Dequeue();
+            }
         }
 
         public int GetZombies()

@@ -83,6 +83,22 @@ public class ZombiesTests
         Assert.Equal(1, number_of_zombies);
         Assert.Equal("Z2", first_zombie);
     }
+
+    [Fact]
+    public void TestToSeeIfScaleable()
+    {
+        var room = new Room(2);
+        room.AddZombie("Z1");
+        room.AddZombie("Z2");
+        room.AddZombie("Z3");
+        room.AddZombie("Z4");
+
+        var number_of_zombies = room.GetZombies();
+        var first_zombie = room.GetFirstZombie();
+
+        Assert.Equal(2, number_of_zombies);
+        Assert.Equal("Z3", first_zombie);
+    }
 }
 
 

@@ -11,7 +11,7 @@
 
         public bool IsFull()
         {
-            if (Capacity == 0)
+            if (this.Capacity == 0)
             {
                 return true;
             }

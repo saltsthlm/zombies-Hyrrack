@@ -9,7 +9,7 @@ public class ZombiesTests
         var room = new Room(0);
 
         //act
-        var isRoomFull = room.isFull();
+        var isRoomFull = room.IsFull();
 
         //assert
         Assert.True(isRoomFull);
@@ -18,6 +18,11 @@ public class ZombiesTests
     [Fact]
     public void EmptyRoomThatFitsOneZombie_IsNotFull()
     {
+        var room = new Room(1);
+
+        var isRoomFull = room.IsFull();
+
+        Assert.False(isRoomFull);
 
     }
 

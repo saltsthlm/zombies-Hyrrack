@@ -40,5 +40,10 @@
         {
             return _zombies.Count;
         }
+
+        public string GetFirstZombie()
+        {
+            return _zombies.Peek();
+        }
     }
 }

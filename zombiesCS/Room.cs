@@ -3,6 +3,7 @@
     public class Room
     {
         public int Capacity { get; private set; }
+        private Queue<string> _zombies = new Queue<string>();
         public Room(int capacity)
         {
             this.Capacity = capacity;

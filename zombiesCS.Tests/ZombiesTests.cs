@@ -49,7 +49,7 @@ public class ZombiesTests
         var room = new Room(1);
         room.AddZombie("Z1");
 
-        var number_of_zombies = room.Queue.Count();
+        var number_of_zombies = room.GetZombies();
         var isRoomFull = room.IsFull();
 
         Assert.Equal(number_of_zombies, 1);

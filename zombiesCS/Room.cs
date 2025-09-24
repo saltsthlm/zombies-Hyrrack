@@ -24,6 +24,8 @@
             {
                 throw new Exception("Cannot add zombies to room with zero capacity");
             }
+
+            _zombies.Enqueue(zombie);
         }
     }
 }

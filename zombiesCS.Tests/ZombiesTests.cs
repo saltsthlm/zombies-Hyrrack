@@ -33,7 +33,7 @@ public class ZombiesTests
         {
             var room = new Room(0);
 
-            room.AddZombie(1);
+            room.AddZombie("Z1");
         }
         catch (System.Exception ex)
         {
@@ -47,7 +47,7 @@ public class ZombiesTests
     public void OneRoomerBecomesFull_WhenAZombieIsAdded()
     {
         var room = new Room(1);
-        room.AddZombie(1);
+        room.AddZombie("Z1");
 
         var number_of_zombies = room.Queue.Count();
         var isRoomFull = room.IsFull();

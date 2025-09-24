@@ -7,5 +7,15 @@
         {
             this.Capacity = capacity;
         }
+
+
+        public bool IsFull()
+        {
+            if (Capacity == 0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

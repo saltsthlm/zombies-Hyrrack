@@ -3,11 +3,12 @@
     public class Room
     {
         public int Capacity { get; private set; }
-        private Queue<string> _zombies = new Queue<string>();
+        private Queue<string> _zombies = new();
         public Room(int capacity)
         {
             this.Capacity = capacity;
         }
+        
 
         public bool IsFull()
         {

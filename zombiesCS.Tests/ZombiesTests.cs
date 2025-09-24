@@ -46,6 +46,14 @@ public class ZombiesTests
     [Fact]
     public void OneRoomerBecomesFull_WhenAZombieIsAdded()
     {
+        var room = new Room(1);
+        room.AddZombie(1);
+
+        var number_of_zombies = room.Queue.Count();
+        var isRoomFull = room.IsFull();
+
+        Assert.Equal(number_of_zombies, 1);
+        Assert.True(isRoomFull);
     }
 
     [Fact]

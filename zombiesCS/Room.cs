@@ -9,7 +9,6 @@
             this.Capacity = capacity;
         }
 
-
         public bool IsFull()
         {
             if (this.Capacity == 0)
@@ -17,6 +16,14 @@
                 return true;
             }
             return false;
+        }
+
+        public AddZombie(int number_of_zombies)
+        {
+            if (this.Capacity < 1)
+            {
+                throw new Exception("Cannot add zombies to room with zero capacity");
+            }
         }
     }
 }
